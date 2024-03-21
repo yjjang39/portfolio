@@ -1,0 +1,325 @@
+/* 구글 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+/* css 초기화 */
+body, div, header, main, footer, p, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-size: 15px;
+    font-family: "Do Hyeon", 'Poppins' ;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #181818;
+    color: #fff;
+}
+ul, li {
+    list-style: none;
+}
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+.blur2{
+    position: absolute;
+    right: 40%;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+
+/* Header */
+.logo_img {
+    width: 60px;
+}
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+.gnb > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.gnb > ul > li {
+    font-size: 20px;
+}
+.gnb > ul > li > a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+.gnb > ul > li > a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+.gnb > ul > li > a:hover::after{
+    width: 70%;
+}
+.resume {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.resume:hover {
+    background-color: #1e40af;
+}
+
+
+/* Main */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+main > div {
+    margin: 30px auto;
+    padding: 5rem 2rem;
+}
+.info h1 {
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.info h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+.info span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff; 
+}
+.info p {
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+.image{
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.image::before{
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+.image img{
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Skills */
+.skills > h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+/* 막대그래프 */
+.zt-skill-bar {
+    color: #fff;
+    font-size: 18px;
+    line-height: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+
+    background-color: rgba(0,0,0,0.1);
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+
+}
+
+.zt-skill-bar * {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.zt-skill-bar div {
+    background-color: #ffc600;
+    position: relative;
+    padding-left: 25px;
+    width: 0;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.zt-skill-bar span {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0 5px 0 10px;
+    background-color: #1a1a1a;
+
+    -webkit-border-radius: 0 2px 2px 0;
+    -moz-border-radius: 0 2px 2px 0;
+    -ms-border-radius: 0 2px 2px 0;
+    border-radius: 0 2px 2px 0;
+}
+
+.zt-skill-bar span:before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: -3px;
+    margin-top: -3px;
+    background-color: #1a1a1a;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* Project */
+.project > h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+.card_wrap {
+    margin-top: 4rem;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; */
+}
+.project .card {
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    margin-bottom: 40px;
+}
+.project .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+.project .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.project .card li{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+.project .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.project .card a:hover{
+    color: #1e40af;
+}
+
+
+
+/* Contact */
+.contact > h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+.contact li {
+    font-size: 20px;
+    text-align: center;
+}
+.github_link {
+    color: #89f9db;
+    text-decoration: underline;
+}
+.contact_name {
+    text-align: center;
+    font-size: 22px;
+    background: #1e40af;
+    width: 110px;
+    margin: 0 auto 20px;
+}
+
+
+/* Footer */
+footer {
+    max-width: 1200px;
+    padding: 50px 0 30px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+@media (width < 900px){
+    .info{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .info .image{
+        grid-area: 1/1/2/2;
+    }
+    .card_wrap{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 600px){
+    .info .image::before{
+        display: none;
+    }
+
+    .card_wrap{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
