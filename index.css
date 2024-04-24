@@ -74,7 +74,7 @@ header {
 .gnb > ul > li > a:hover::after{
     width: 70%;
 }
-.resume {
+/* .resume {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
@@ -85,7 +85,7 @@ header {
 }
 .resume:hover {
     background-color: #1e40af;
-}
+} */
 
 
 /* Main */
@@ -317,9 +317,20 @@ footer {
     .info .image::before{
         display: none;
     }
-
     .card_wrap{
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .image{
+        max-width: 350px;
+    }
+    .image img{
+        max-width: 350px;
+    }
+    .gnb > ul {
+        gap: 20px;
+    }
+    .logo_img {
+        width: 35px;
+    }
 }
